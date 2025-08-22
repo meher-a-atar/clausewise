@@ -78,8 +78,6 @@ def analyze_document(text: str) -> tuple[str, str, str]:
 # -------- Routes --------
 @app.route("/")
 def home():
-    if "user_id" in session:
-        return redirect(url_for("dashboard"))
     return render_template("index.html")
 
 @app.route("/about")
